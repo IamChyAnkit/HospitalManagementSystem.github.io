@@ -1,0 +1,38 @@
+{% extends "layout.html" %} 
+{% block body %}
+	<br>
+    <div class="bdcontainer">
+	<h3 class="formHeader">Update</h3>
+    
+	
+		<form method="post">
+
+            <table class="apsttab">
+                <tr>
+                    <td>
+                        <select class="sel" name='name' id="dept">
+                            <option value="name">Name</option>
+                            <option value="gender">Gender</option>
+                            <option value="bg">Blood Group</option>
+                            <option value="phone">Phone No.</option>
+                            <option value="Address">Address</option>
+                                
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="value">
+                    </td>
+                    <td>
+                        <input type="submit" value="Submit" />
+                    </td>
+                </tr>
+            </table>
+		</form>
+</div>
+{% endblock %}
+
+
+
+
+
+

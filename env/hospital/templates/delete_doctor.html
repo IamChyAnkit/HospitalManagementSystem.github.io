@@ -1,0 +1,16 @@
+{% extends "a_layout.html" %} 
+{%block body %}
+<form  class="regform" method="post" >
+  <label class="lab"  for='doctor'>Choose Doctor:</label>
+  <select class="asel"  name='doctor' id="doctor">
+  {% for doct in department[depart] %}
+  <option value={{doct}}>{{doct}}</option>
+  {% endfor %}
+  </select>
+  
+  <br><br>
+  <input type="submit" value="Submit" />
+</form>
+
+        {% endblock %}
+

@@ -1,0 +1,49 @@
+{% extends "d_layout.html" %} 
+{%block body %}
+<div class="box">
+<div class="container">
+	
+	<table class="booktabi">
+		<h2 class="formHeader">My Profile</h2>
+        <tr>
+			<th>ID:</th>
+			<td>{{ doctor.id }}</td>
+		</tr>
+		<tr>
+			<th>Name:</th>
+			<td>{{ doctor.name }}</td>
+		</tr>
+		<tr>
+			<th>Date of Birth:</th>
+			<td>{{ doctor.dob }}</td>
+		</tr>
+		<tr>
+			<th>Gender:</th>
+			<td>{{ doctor.gender }}</td>
+		</tr>
+		<tr>
+			<th>Specialization:</th>
+			<td>{{ doctor.specilazition }}</td>
+		</tr>
+        <tr>
+			<th>Department:</th>
+			<td>{{ doctor.department }}</td>
+		</tr>
+		<tr>
+			<th>Phone No:</th>
+			<td>{{ doctor.phoneno }}</td>
+		</tr>
+		<tr>
+			<th>Address:</th>
+			<td>{{ doctor.address}}</td>
+		</tr>
+        <tr>
+			<th>Salary:</th>
+			<td>{{ doctor.sallary}}</td>
+		</tr>
+	</table>
+	
+
+
+	
+{% endblock %}

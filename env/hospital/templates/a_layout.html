@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block title %}{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}" >
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="aview_patient"> View Patient</a>
+      <a href="aview_doctor"> View Doctor</a>
+      <a href='add_department'>Add Department</a>
+      <a href="delete_department">Delete Department</a>
+      <a href="dregister">Register Doctor</a>
+      <!-- <a href="a_appoint">Appointments</a> -->
+      <a href="add_doctor"> Add Doctor</a>
+      <a href="remove_doctor">Remove Doctor</a>
+      <a class="nav-link"  href="{{url_for("logout")}}">Logout</a>
+    
+
+    </div>
+
+      {% block body %}{% endblock %}
+  </body>
+</html>

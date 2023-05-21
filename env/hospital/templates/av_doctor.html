@@ -1,0 +1,44 @@
+{% extends "a_layout.html" %} 
+{%block body %}
+<div class="becontainer">
+{% if doctors %}
+<table class="apsttab">
+    <center><h3>Doctors Avilable</h3></center>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Specialization</th>
+        <th>Department</th>
+        <th>Consultant Fee</th>
+        <th>Availability</th>
+        <th>Phone No.</th>
+        <th>Address</th>
+        <th>Salary</th>
+    </tr>
+    
+    {% for doctor in doctors.values() %}
+    <tr>
+        <td>{{doctor.id}}</td>
+        <td>{{doctor.name}}</td>
+        <td>{{doctor.dob}}</td>
+        <td>{{doctor.gender}}</td>
+        <td>{{doctor.specilazition}}</td>
+        <td>{{doctor.department}}</td>
+        <td>{{doctor.fee}}</td>
+        <td>{{doctor.avilability}}</td>
+        <td>{{doctor.phoneno}}</td>
+        <td>{{doctor.address}}</td>
+        <td>{{doctor.sallary}}</td>
+        
+    </tr>
+    {% endfor %}
+ 
+</table>
+{% else %}
+<h3>No Doctor</h3>
+{% endif%}
+</div>
+{% endblock %}
+

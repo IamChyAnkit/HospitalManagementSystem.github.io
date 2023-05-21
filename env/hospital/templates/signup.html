@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+     <style>
+        /* CSS for header */
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        } 
+        /* header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+        } */
+        
+        
+        main {
+            display: flex;
+            flex-grow: 1;
+            align-items: stretch;
+        }
+        .lefty {
+            background-image:  url_for('static', filename='pica.png')  ;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .left {
+            width: 70%;
+            background-image: url("static/bpic.png")  ;
+           
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .left img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        .right {
+            width: 50%;
+            background-color:white;
+            padding: 1em;
+        }
+        .right-a{
+            margin-left: 100px;
+            margin-top: 50px;
+            margin-right: 100px;
+
+        }
+
+        .text-a{
+            font-weight: 50;
+            font-size:45px;
+            margin-bottom: 5%;
+            line-height: 1.5em;
+        }
+        .text-b{
+            font-weight: 500;
+            font-size:large;
+            margin-bottom: 5%;
+        }
+       
+        label {
+            display: block;
+            font-weight: 300 !important;
+            max-width: 100%;
+            margin-bottom: 5px;
+        }
+        
+        input[type="email"],
+        input[type="password"],
+        input[type="text"]
+        {
+            display: block;
+            width: 100%;
+            border: 2px solid #cccccc;
+            margin-bottom: 20px;
+            padding: 0;
+            border-color: #3e8e41;
+            height: 25px;
+
+        }
+     
+        
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 200px;
+            font-size:medium ;
+            font-weight: 200;
+            margin-left: 100px;
+        }
+        
+        
+        .rember{
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .forget{
+            font-size: large;
+            font-weight: 400;
+           
+            padding-left: 150px;
+            font-style: normal;
+            font-display:initial ;
+            
+        }
+        .a-1{
+            color: #3e8e41;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <h1>My Page</h1>
+    </header> -->
+
+    <main>
+        <div class="left">
+            
+        </div>
+
+        <div class="right">
+            <div class="right-a">
+                <div class="text-a">Welcome! </div>
+                    <div class="text-b">Please Signup </div>
+            
+            
+            <!-- Right content goes here -->
+                <form method="post">
+                    <div>
+                    <label for="u_name" class="contorl-label">User Name:</label>
+                    <input tabindex="1" type="text" id="u_name" class="form-control" name="username" required>
+                    <label for="name" class="contorl-label">Email:</label>
+                    <input tabindex="1" type="email" id="name" class="form-control" name="email" required>
+                    <label for="password">Password:</label>
+                    <input tabindex="2" type="password"  name="password" class="form-control" required>
+
+                    <label for="password"> Confirm Password:</label>
+                    <input tabindex="3" type="password"  name="password" class="form-control" required>
+                    <label>
+                    <div class="rember">
+                    <input tabindex="4" id="rememberMe" name="rememberMe" type="checkbox" checked="">
+                    'Remember me'
+                    </label>
+                    
+                    </div>
+                    <input tabindex="5" type="submit" value="Sign up">
+                    </div>
+                    
+                </form>  
+            </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

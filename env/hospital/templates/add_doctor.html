@@ -1,0 +1,47 @@
+{% extends "a_layout.html" %} 
+{%block body %}
+<span>
+    <h2 class="formHeader">Add Doctor</h2>
+  
+    <div >
+    <form class="regform" method="post">
+    <label class="lab"  for='depart'>Choose Department:</label>
+    <select class="asel"  name='depart' id="depart">
+    {% for dept in department.keys() %}
+    <option value={{dept}}>{{dept}}</option>
+    {% endfor %}
+    </select>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="name">ID:</label>
+    <input type="text" id="name" name="d" required>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+    <label for="name">Gender:</label>
+    <input type="text" id="name" name="gender" required>
+    
+    <label for="name">Specialization:</label>
+    <input type="text" id="name" name="special" required>
+    <label for="name">Fee:</label>
+    <input type="text" id="name" name="fee" required>
+    <label for="name">Availability:</label>
+    <input type="text" id="name" name="avilability" required>
+    <label for="name">Phone No:</label>
+    <input type="tel" id="name" name="phn" required>
+    <label for="name">Address:</label>
+    <input type="text" id="name" name="address" required>
+    <label for="name">Salary:</label>
+    <input type="number" id="name" name="sal" required>
+    <input type="submit" value="Submit" />
+  </form>
+  </div>
+  
+  
+  
+
+
+</span>
+        
+ 
+        {% endblock %}
+

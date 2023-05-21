@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block title %}{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}" >
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    
+  </head>
+  <body>
+    <div class="topnav">
+       
+      <a class="nav-link" href="{{url_for("d_profile")}}">Personal Details</a></li>
+      <a href='/d_appoint'>My Appointment</a></li>
+      <a href='/password'>Password Reset</a></li>
+      <a class="nav-link"  href="{{url_for("logout")}}">Logout</a></li>
+    
+
+    </div>
+
+      {% block body %}{% endblock %}
+  </body>
+</html>

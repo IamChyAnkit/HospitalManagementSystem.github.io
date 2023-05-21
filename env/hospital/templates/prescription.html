@@ -1,0 +1,20 @@
+{% extends "d_layout.html" %} 
+{%block body %}
+
+      <h1 class="formHeader">Prescribe Your Patient</h1>
+      
+      <form class="regform" method="post">
+          <label for="name">Medicine:</label>
+          <input type="text" id="name" name="medicine" required>
+          <label for="dos">Dosage:</label>
+          <input type="text" id="dos" name="dosages" required>
+          <label for="adv">Advice:</label>
+          <input type="text" id="adv" name="advice" required>
+          <input type="submit" value="Submit">
+          
+      </form>  
+      
+        
+ 
+        {% endblock %}
+

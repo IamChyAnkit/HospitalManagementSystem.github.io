@@ -1,0 +1,47 @@
+{% extends "layout.html" %} 
+{% block body %}
+	<br>
+	<div class="bcontainer">
+		
+		<table class="booktab">
+			
+		<thead> 
+			<h3 class="formHeader">Make Your Appointment</h3>
+		<tr>
+			<th class="bookth">Department</th>
+			<th class="bookth">Doctor</th>
+			<th class="bookth">Time</th>
+			<th class="bookth">Date</th>
+			<th class="bookth"></th>
+		</tr>
+		</thead>
+	<tbody>
+	{% for dept  in department.keys() %}
+	<tr>
+		<form method="post">
+		<td class='booktd'><div class="divi">
+			<label class="lab" for='dept'>{{ dept }}:</label>
+		</td>
+		<td class='booktd'><select class="sel" name='{{dept}}' id="dept">
+			{% for doctor in doctors.values() %}
+				{% if doctor.department == dept %}
+					<option value="{{doctor.id}}">{{ doctor.name }}</option>
+				{% endif %}
+			{% endfor %}
+		</select>
+		</td>
+		<td class="booktd"><input type="text" id="name" name="time" required></td>
+		<td class="booktd"><input type="date" id="dob" name="date" required></td>
+		<td class="booktd"><input type="submit" value="Submit" /></td>
+	</form>
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+{% endblock %}
+
+</div>
+
+
+
+

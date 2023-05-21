@@ -1,0 +1,58 @@
+{% extends "d_layout.html" %} 
+{%block body %}
+
+{% if doctor.appointments[0] %}
+<center><h3>Appointment</h3></center>
+<div class="bcontainer">
+<table class="booktab">
+    
+    <tr>
+        
+        <th>Patient Name</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th></th>
+        
+        <th>Add Prescription</th>
+    </tr>
+
+    
+    {% for appoint in doctor.appointments %}
+
+    <tr>
+        <td>{{appoint.patient}}</td>
+        <td>{{appoint.date}}</td>
+        <td>{{appoint.time}}</td>
+        {% if appoint.status == 'Not Confirmed' %}
+        <td>
+        <form action="" method="post">
+            <select class="sel" name="{{appoint.patient}}" id="name">
+            <option value="Confirm">Confirm</option>
+            <option value="Cancel">Cancel</option>
+        </select>
+            
+        {% else %}
+            <td>Confirmed</td>
+        {% endif %}
+    <td>
+        <input type="submit" value="Submit" />
+    </td>
+    <td>
+        <button class="btn"><div class="create"><a href="{{url_for('prescription',patient=appoint.patient)}}" class="a-1">Add</a></div></button>
+    </td>
+    </form>
+    
+        
+    </tr>
+    {% endfor %}
+	{% else %}
+    <tr>
+        <h3>No Appointment</h3>
+    </tr>
+   
+</table>
+{% endif%}
+</div>
+{% endblock %}
+

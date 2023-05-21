@@ -1,0 +1,33 @@
+{% extends "layout.html" %} 
+{%block body %}
+<span>
+    <h2 class="formHeader">Add Doctor</h2>
+  
+    <div >
+    <form class="regform" method="post">
+    <label class="lab"  for='depart'>Choose Department:</label>
+    <select class="sel"  name='depart' id="depart">
+    {% for dept in department.keys() %}
+    <option value={{dept}}>{{dept}}</option>
+    {% endfor %}
+    </select>
+    <input type="submit" value="Submit" />
+    <label class="lab"  for='doctor'>Choose Doctor:</label>
+    <select class="sel"  name='doctor' id="doctor">
+    {% for doc in department[value] %}
+    <option value={{doc}}>{{doc}}</option>
+    {% endfor %}
+    </select>
+    <input type="submit" value="Submit" />
+  </form>
+  </div>
+  
+  
+  
+
+
+</span>
+        
+ 
+        {% endblock %}
+

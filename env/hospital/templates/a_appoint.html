@@ -1,0 +1,41 @@
+{% extends "a_layout.html" %} 
+{%block body %}
+
+
+<center><h3>Appointment</h3></center>
+<div class="bcontainer">
+
+
+
+  
+
+    <table>
+        <thead>
+          <tr>
+            <th>Doctor Name</th>
+            <th>Patient Name</th>
+            <th>Date</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for doctor in doctors %}
+          
+        {% for appointment in doctor.appointments %}
+          
+          <tr>
+            <td>{{ doctor.name }}</td>
+            <td>{{ appointment.patient.name }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.time }}</td>
+          </tr>
+          {% endfor %}
+          {% endfor %}
+        </tbody>
+      </table>
+      
+
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends "a_layout.html" %} 
+{%block body %}
+<span>
+      <h2 class="formHeader">Add Department</h2>
+      
+      <form action="{{ url_for('add_department') }}" class="regform" method="post">
+      
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <input type="submit" value="Submit">
+      </form>  
+</span>
+
+        {% endblock %}
+

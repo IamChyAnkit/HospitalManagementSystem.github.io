@@ -1,0 +1,36 @@
+{% extends "a_layout.html" %} 
+{%block body %}
+<div class="bdcontainer">
+{% if patients %}
+<table class="apsttab">
+    <center><h3> Patient</h3></center>
+    <tr>
+        
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Blood Group</th>
+        <th>Phone No.</th>
+        <th>Address</th>
+    </tr>
+    
+    {% for patient in patients.values() %}
+    <tr>
+        <td>{{patient.name}}</td>
+        <td>{{patient.dob}}</td>
+        <td>{{patient.gender}}</td>
+        <td>{{patient.bg}}</td>
+        <td>{{patient.phoneno}}</td>
+        <td>{{patient.address}}</td>
+        
+        
+    </tr>
+    {% endfor %}
+ 
+</table>
+{% else %}
+<h3>No Registered Patient</h3>
+{% endif%}
+</div>
+{% endblock %}
+

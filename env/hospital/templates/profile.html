@@ -1,0 +1,62 @@
+{% extends "layout.html" %} 
+{%block body %}
+<br><br><br>
+<div class="box">
+<div class="becont">
+	<h2 class="formHeader">Profile</h2>
+	<table class="booktab">
+		<tr>
+			<th>Name:</th>
+			<td>{{ personal_details.name }}</td>
+		</tr>
+		<tr>
+			<th>Date of Birth:</th>
+			<td>{{ personal_details.dob }}</td>
+		</tr>
+		<tr>
+			<th>Gender:</th>
+			<td>{{ personal_details.gender }}</td>
+		</tr>
+		<tr>
+			<th>Blood Group:</th>
+			<td>{{ personal_details.bg }}</td>
+		</tr>
+		<tr>
+			<th>Phone No.:</th>
+			<td>{{ personal_details.phoneno }}</td>
+		</tr>
+		<tr>
+			<th>Address:</th>
+			<td>{{ personal_details.address}}</td>
+		</tr>
+	</table>
+	
+</div>
+
+
+<div class="becont">
+	<table class="ptab">
+	<center><h2>Prescription</h2></center>
+	{% if personal_details.prescriptions[0] %}
+	<tr>
+		<th>Medicine</th>
+		<th>Dosage</th>
+		<th>Advice</th>
+	</tr>
+	{% for presc in personal_details.prescriptions %}
+			
+			<tr>
+				
+				<td>{{ presc.medicine }}</td>
+				<td>{{ presc.dosage }}</td>
+				<td>{{presc.advice}}    </td>
+			</tr>
+		{% endfor %}
+	{% else %}
+			<center><h3>No Prescription</h3></center>
+		{% endif%}
+		
+</div>
+</div>
+</table>	
+{% endblock %}

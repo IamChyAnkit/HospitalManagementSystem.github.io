@@ -1,0 +1,22 @@
+{% extends "a_layout.html" %} 
+{%block body %}
+<span>
+  <h2 class="formHeader">Delete Doctor</h2>
+
+  <div >
+  <form action="{{ url_for('remove_doctor') }}" class="regform" method="post">
+  <label class="lab"  for='depart'>Choose Department:</label>
+  <select class="asel"  name='depart' id="depart">
+  {% for dept in department.keys() %}
+  <option value={{dept}}>{{dept}}</option>
+  {% endfor %}
+  </select>
+  <br><br>
+
+  <input type="submit" value="Submit" />
+</form>
+
+</div>
+</span>
+        {% endblock %}
+

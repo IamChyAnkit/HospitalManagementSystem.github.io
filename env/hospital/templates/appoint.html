@@ -1,0 +1,34 @@
+{% extends "layout.html" %} 
+{%block body %}
+<div class="bccontainer">
+<table class="apsttab">
+    <center><h3>Appointment</h3></center>
+    <tr>
+        <th>Doctor</th>
+        <th>Department</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Status</th>
+    </tr>
+    {% if personal_details.appointments[0] %}
+    {% for appoint in personal_details.appointments %}
+    <tr>
+        
+        <td>{{appoint.doctor}}</td>
+        <td>{{appoint.department}}</td>
+        <td>{{appoint.date}}</td>
+        <td>{{appoint.time}}</td>
+        <td>{{appoint.status}}</td>
+    </tr>
+    {% endfor %}
+    {% else%}
+    <tr>
+        <h3>No Appointment</h3>
+    </tr>
+	
+    {% endif %}
+</table>
+        
+</div>
+{% endblock %}
+
