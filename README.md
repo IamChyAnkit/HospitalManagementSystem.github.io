@@ -1,1 +1,1 @@
-# IHospitalManagementSystem.github.io
+# HospitalManagementSystem.github.io
